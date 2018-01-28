@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="part1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_6041.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_6041.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_6041.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_6041.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|my_circuit:mc|altshift_taps:buffer_right_rtl_0" CBX_FILE_NAME="shift_taps_bpm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|my_circuit:mc|average_filter_16:afll|altshift_taps:fifo_rtl_0" CBX_FILE_NAME="shift_taps_jjm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|my_circuit:mc|average_filter_16:aflr|altshift_taps:fifo_rtl_0" CBX_FILE_NAME="shift_taps_jjm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|part1|my_circuit:mc|average_filter_32:afr|altshift_taps:fifo_rtl_0" CBX_FILE_NAME="shift_taps_mkm.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,17 @@
+module memory (
+	output reg [3:0] q, 
+	input [3:0] address,
+	input [3:0] data,
+	input we, //write enable
+	input clk
+);
+
+reg [3:0] mem [127:0];
+
+always @ (posedge clk)
+	if (we)
+		mem[address] = data;
+	else
+		q = mem[address];
+
+endmodule

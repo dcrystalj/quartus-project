@@ -1,0 +1,38 @@
+module up_down_counter_to_9 (enable, clk, up, out0, out1);
+	output [3:0] out0, out1;
+	input enable, clk, up;
+	reg [3:0] counter0, counter1;
+	
+	
+	always @(clk)
+		if (up) begin
+			
+			if (counter0 == 4'd9) begin
+				counter0 <= 4'd0;
+				counter1 <= counter1 + 1;
+			end else begin
+				counter0 <= counter0 + 1;
+			end
+			
+			if (counter1 == 4'd10) begin
+				counter1 <= 4'd0;
+			end
+			
+		end else begin //down
+		
+			if (counter0 == 4'd0) begin
+				counter0 <= 4'd9;
+				counter1 <= counter1 - 1;
+			end else begin
+				counter0 <= counter0 - 1;
+			end
+			
+			if (counter1 == -4'd1) begin
+				counter1 <= 4'd9;
+			end
+			
+		end
+		
+		assign out0 = counter0;
+		assign out1 = counter1;
+endmodule 

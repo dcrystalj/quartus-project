@@ -1,0 +1,24 @@
+module up_counter    (
+	out     ,  // Output of the counter
+	enable  ,  // enable for counter
+	clk     ,  // clock Input
+	reset      // reset Input
+);
+	//----------Output Ports--------------
+	output [3:0] out;
+	//------------Input Ports--------------
+	input enable, clk, reset;
+	//------------Internal Variables--------
+	//wire [3:0]  out;
+	reg [28:0] counter;
+	//-------------Code Starts Here-------
+	
+	always @(posedge clk)
+		if (reset) begin
+			counter <= 29'b0 ;
+		end else if (enable) begin
+			counter <= counter + 1;
+		end
+		
+		assign out = counter[28:25];
+endmodule 

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\quartus_projects\project3
+vadd_16
+Z1 IWZFOlj12Mb9M2L]QL2CSR3
+Z2 Vfd0N_72dePeKNQDP@MBH=0
+Z3 dC:\quartus_projects\hw1
+Z4 w1411574096
+Z5 8C:/quartus_projects/hw1/add_16.v
+Z6 FC:/quartus_projects/hw1/add_16.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -reportprogress|300|-work|fax|C:/quartus_projects/hw1/add_16.v|
+Z9 o-work fax -O0
+Z10 !s100 Za:17g6h6Q5:cG`ha@<`l1
+Z11 !s108 1411574768.948000
+Z12 !s107 C:/quartus_projects/hw1/add_16.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vadd_4
+Z13 !s100 NdVTCm`SY8FTafneoJeCR2
+Z14 I7fFgQYQd:l@2]GO`Y^DDU2
+Z15 V21:[>k@?o8i@k^fmh1b1_1
+R3
+Z16 w1411386199
+Z17 8C:/quartus_projects/hw1/add_4.v
+Z18 FC:/quartus_projects/hw1/add_4.v
+L0 1
+R7
+r1
+31
+Z19 !s90 -reportprogress|300|-work|fax|C:/quartus_projects/hw1/add_4.v|
+R9
+Z20 !s108 1411574769.042000
+Z21 !s107 C:/quartus_projects/hw1/add_4.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vfull_adder
+Z22 !s100 d84bbX1_m>nhX>Kbfn2CN0
+Z23 I?LRLLXlKQe]i8bJOPYfB10
+Z24 VQLN_oDgGfDWe=baXh_lQk1
+R3
+Z25 w1411386176
+Z26 8C:/quartus_projects/hw1/full_adder.v
+Z27 FC:/quartus_projects/hw1/full_adder.v
+L0 1
+R7
+r1
+31
+Z28 !s90 -reportprogress|300|-work|fax|C:/quartus_projects/hw1/full_adder.v|
+R9
+!i10b 1
+!s85 0
+Z29 !s108 1411574769.119000
+Z30 !s107 C:/quartus_projects/hw1/full_adder.v|
+!s101 -O0
+vhalf_adder
+!i10b 1
+Z31 !s100 e^JO4:=>i]nzJ5N;TT^i00
+Z32 IM2WbU<V>hZZ?4ZNa:3ROl1
+Z33 VE<enajKcoMm6HhL^G?Bc73
+R3
+Z34 w1411325975
+Z35 8C:/quartus_projects/hw1/half_adder.v
+Z36 FC:/quartus_projects/hw1/half_adder.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1411574769.202000
+!s107 C:/quartus_projects/hw1/half_adder.v|
+Z37 !s90 -reportprogress|300|-work|fax|C:/quartus_projects/hw1/half_adder.v|
+!s101 -O0
+R9

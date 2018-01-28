@@ -1,0 +1,3 @@
+module mux(ENABLE, A, B, C, D, Out);
+
+endmodule

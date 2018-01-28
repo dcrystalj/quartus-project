@@ -1,0 +1,537 @@
+|add_16
+x1[0] => x1[0].IN1
+x1[1] => x1[1].IN1
+x1[2] => x1[2].IN1
+x1[3] => x1[3].IN1
+x1[4] => x1[4].IN1
+x1[5] => x1[5].IN1
+x1[6] => x1[6].IN1
+x1[7] => x1[7].IN1
+x1[8] => x1[8].IN1
+x1[9] => x1[9].IN1
+x1[10] => x1[10].IN1
+x1[11] => x1[11].IN1
+x1[12] => x1[12].IN1
+x1[13] => x1[13].IN1
+x1[14] => x1[14].IN1
+x1[15] => x1[15].IN1
+x2[0] => x2[0].IN1
+x2[1] => x2[1].IN1
+x2[2] => x2[2].IN1
+x2[3] => x2[3].IN1
+x2[4] => x2[4].IN1
+x2[5] => x2[5].IN1
+x2[6] => x2[6].IN1
+x2[7] => x2[7].IN1
+x2[8] => x2[8].IN1
+x2[9] => x2[9].IN1
+x2[10] => x2[10].IN1
+x2[11] => x2[11].IN1
+x2[12] => x2[12].IN1
+x2[13] => x2[13].IN1
+x2[14] => x2[14].IN1
+x2[15] => x2[15].IN1
+c_in => c_tmp[0].IN1
+r[0] <= add_4:gen_add4[0].add4.r
+r[1] <= add_4:gen_add4[0].add4.r
+r[2] <= add_4:gen_add4[0].add4.r
+r[3] <= add_4:gen_add4[0].add4.r
+r[4] <= add_4:gen_add4[1].add4.r
+r[5] <= add_4:gen_add4[1].add4.r
+r[6] <= add_4:gen_add4[1].add4.r
+r[7] <= add_4:gen_add4[1].add4.r
+r[8] <= add_4:gen_add4[2].add4.r
+r[9] <= add_4:gen_add4[2].add4.r
+r[10] <= add_4:gen_add4[2].add4.r
+r[11] <= add_4:gen_add4[2].add4.r
+r[12] <= add_4:gen_add4[3].add4.r
+r[13] <= add_4:gen_add4[3].add4.r
+r[14] <= add_4:gen_add4[3].add4.r
+r[15] <= add_4:gen_add4[3].add4.r
+c_out <= add_4:gen_add4[3].add4.c_out
+
+
+|add_16|add_4:gen_add4[0].add4
+x1[0] => x1[0].IN1
+x1[1] => x1[1].IN1
+x1[2] => x1[2].IN1
+x1[3] => x1[3].IN1
+x2[0] => x2[0].IN1
+x2[1] => x2[1].IN1
+x2[2] => x2[2].IN1
+x2[3] => x2[3].IN1
+c_in => c_tmp[0].IN1
+r[0] <= full_adder:gen_full_adder[0].fa.r
+r[1] <= full_adder:gen_full_adder[1].fa.r
+r[2] <= full_adder:gen_full_adder[2].fa.r
+r[3] <= full_adder:gen_full_adder[3].fa.r
+c_out <= full_adder:gen_full_adder[3].fa.c_out
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[0].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[0].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[0].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[1].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[1].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[1].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[2].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[2].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[2].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[3].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[3].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[0].add4|full_adder:gen_full_adder[3].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4
+x1[0] => x1[0].IN1
+x1[1] => x1[1].IN1
+x1[2] => x1[2].IN1
+x1[3] => x1[3].IN1
+x2[0] => x2[0].IN1
+x2[1] => x2[1].IN1
+x2[2] => x2[2].IN1
+x2[3] => x2[3].IN1
+c_in => c_tmp[0].IN1
+r[0] <= full_adder:gen_full_adder[0].fa.r
+r[1] <= full_adder:gen_full_adder[1].fa.r
+r[2] <= full_adder:gen_full_adder[2].fa.r
+r[3] <= full_adder:gen_full_adder[3].fa.r
+c_out <= full_adder:gen_full_adder[3].fa.c_out
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[0].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[0].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[0].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[1].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[1].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[1].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[2].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[2].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[2].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[3].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[3].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[1].add4|full_adder:gen_full_adder[3].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4
+x1[0] => x1[0].IN1
+x1[1] => x1[1].IN1
+x1[2] => x1[2].IN1
+x1[3] => x1[3].IN1
+x2[0] => x2[0].IN1
+x2[1] => x2[1].IN1
+x2[2] => x2[2].IN1
+x2[3] => x2[3].IN1
+c_in => c_tmp[0].IN1
+r[0] <= full_adder:gen_full_adder[0].fa.r
+r[1] <= full_adder:gen_full_adder[1].fa.r
+r[2] <= full_adder:gen_full_adder[2].fa.r
+r[3] <= full_adder:gen_full_adder[3].fa.r
+c_out <= full_adder:gen_full_adder[3].fa.c_out
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[0].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[0].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[0].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[1].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[1].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[1].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[2].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[2].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[2].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[3].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[3].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[2].add4|full_adder:gen_full_adder[3].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4
+x1[0] => x1[0].IN1
+x1[1] => x1[1].IN1
+x1[2] => x1[2].IN1
+x1[3] => x1[3].IN1
+x2[0] => x2[0].IN1
+x2[1] => x2[1].IN1
+x2[2] => x2[2].IN1
+x2[3] => x2[3].IN1
+c_in => c_tmp[0].IN1
+r[0] <= full_adder:gen_full_adder[0].fa.r
+r[1] <= full_adder:gen_full_adder[1].fa.r
+r[2] <= full_adder:gen_full_adder[2].fa.r
+r[3] <= full_adder:gen_full_adder[3].fa.r
+c_out <= full_adder:gen_full_adder[3].fa.c_out
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[0].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[0].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[0].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[1].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[1].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[1].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[2].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[2].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[2].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[3].fa
+x1 => x1.IN1
+x2 => x2.IN1
+c_in => c_in.IN1
+c_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= half_adder:ha2.r
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[3].fa|half_adder:ha1
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|add_16|add_4:gen_add4[3].add4|full_adder:gen_full_adder[3].fa|half_adder:ha2
+x1 => comb.IN0
+x1 => comb.IN0
+x2 => comb.IN1
+x2 => comb.IN1
+c <= comb.DB_MAX_OUTPUT_PORT_TYPE
+r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

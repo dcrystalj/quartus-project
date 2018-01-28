@@ -1,0 +1,129 @@
+|up_down_counter
+clock => clock.IN1
+button0 => enable.IN0
+button0 => _.IN1
+button1 => enable.IN1
+HEX0[0] <= char_7seg:H0.port1
+HEX0[1] <= char_7seg:H0.port1
+HEX0[2] <= char_7seg:H0.port1
+HEX0[3] <= char_7seg:H0.port1
+HEX0[4] <= char_7seg:H0.port1
+HEX0[5] <= char_7seg:H0.port1
+HEX0[6] <= char_7seg:H0.port1
+HEX1[0] <= char_7seg:H1.port1
+HEX1[1] <= char_7seg:H1.port1
+HEX1[2] <= char_7seg:H1.port1
+HEX1[3] <= char_7seg:H1.port1
+HEX1[4] <= char_7seg:H1.port1
+HEX1[5] <= char_7seg:H1.port1
+HEX1[6] <= char_7seg:H1.port1
+
+
+|up_down_counter|tick_200ms:tick
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+enable => counter.OUTPUTSELECT
+clock => out~reg0.CLK
+clock => counter[0].CLK
+clock => counter[1].CLK
+clock => counter[2].CLK
+clock => counter[3].CLK
+clock => counter[4].CLK
+clock => counter[5].CLK
+clock => counter[6].CLK
+clock => counter[7].CLK
+clock => counter[8].CLK
+clock => counter[9].CLK
+clock => counter[10].CLK
+clock => counter[11].CLK
+clock => counter[12].CLK
+clock => counter[13].CLK
+clock => counter[14].CLK
+clock => counter[15].CLK
+clock => counter[16].CLK
+clock => counter[17].CLK
+clock => counter[18].CLK
+clock => counter[19].CLK
+clock => counter[20].CLK
+clock => counter[21].CLK
+clock => counter[22].CLK
+clock => counter[23].CLK
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down_counter|up_down_counter_to_99:up99
+clock => counter1[0].CLK
+clock => counter1[1].CLK
+clock => counter1[2].CLK
+clock => counter1[3].CLK
+clock => counter0[0].CLK
+clock => counter0[1].CLK
+clock => counter0[2].CLK
+clock => counter0[3].CLK
+up => counter0.OUTPUTSELECT
+up => counter0.OUTPUTSELECT
+up => counter0.OUTPUTSELECT
+up => counter0.OUTPUTSELECT
+up => counter1.OUTPUTSELECT
+up => counter1.OUTPUTSELECT
+up => counter1.OUTPUTSELECT
+up => counter1.OUTPUTSELECT
+out0[0] <= counter0[0].DB_MAX_OUTPUT_PORT_TYPE
+out0[1] <= counter0[1].DB_MAX_OUTPUT_PORT_TYPE
+out0[2] <= counter0[2].DB_MAX_OUTPUT_PORT_TYPE
+out0[3] <= counter0[3].DB_MAX_OUTPUT_PORT_TYPE
+out1[0] <= counter1[0].DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= counter1[1].DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= counter1[2].DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= counter1[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down_counter|char_7seg:H0
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+Display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|up_down_counter|char_7seg:H1
+C[0] => Decoder0.IN3
+C[1] => Decoder0.IN2
+C[2] => Decoder0.IN1
+C[3] => Decoder0.IN0
+Display[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+Display[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+Display[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+Display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+Display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

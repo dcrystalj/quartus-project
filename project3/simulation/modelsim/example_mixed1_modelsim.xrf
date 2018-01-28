@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/quartus_projects/project01/lab1.bdf
+source_file = 1, C:/quartus_projects/project3/verfunctions.v
+source_file = 1, C:/quartus_projects/project3/example_mixed1.bdf
+source_file = 1, C:/quartus_projects/project3/db/example_mixed1.cbx.xml
+design_name = example_mixed1
+instance = comp, \x2~I , x2, example_mixed1, 1
+instance = comp, \w1~I , w1, example_mixed1, 1
+instance = comp, \w3~I , w3, example_mixed1, 1
+instance = comp, \w2~I , w2, example_mixed1, 1
+instance = comp, \inst|inst2~0 , inst|inst2~0, example_mixed1, 1
+instance = comp, \w4~I , w4, example_mixed1, 1
+instance = comp, \inst|inst2~1 , inst|inst2~1, example_mixed1, 1
+instance = comp, \inst|inst2~2 , inst|inst2~2, example_mixed1, 1
+instance = comp, \f~I , f, example_mixed1, 1

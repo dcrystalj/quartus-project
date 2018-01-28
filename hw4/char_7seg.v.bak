@@ -1,0 +1,16 @@
+module char_7seg (C, Display);
+	input [2:0] C; // input code
+	output reg [6:0] Display; // output 7-seg code
+	
+	
+	always @ (C)
+		case (C)
+			3'b000: Display = 7'b0001001;
+			3'b001: Display = 7'b0000110;
+			3'b010: Display = 7'b1000111;
+			3'b011: Display = 7'b1000000;
+			3'b111: Display = 7'b1111111;
+			default: Display = 7'b1111111; 
+		endcase
+	
+endmodule

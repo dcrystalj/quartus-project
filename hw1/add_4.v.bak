@@ -1,0 +1,18 @@
+module add4 (x1, x2, c_in, r, c_out);
+	input [3:0] x1, x2;
+	input c_in;
+	output [3:0] r;
+	output c_out;
+	
+	reg [4:0] c_tmp;
+	
+	assign c_tmp[0] = c_in;
+	 
+	for (i = 0; i < 16; i = i +1) begin
+			full_adder fa ( .x1(x1[i]), .x2(x2[i]), .c_in(c_tmp[i]), .c_out(c_tmp[i+1]), .r(r[i]));
+	end
+
+	assign c_out = c_tmp[4];
+	
+endmodule
+

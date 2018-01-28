@@ -1,0 +1,14 @@
+module tick_200ms (out, enable, clk, reset);
+	output [3:0] out;
+	input enable, clk, reset;
+	reg [23:0] counter;
+	
+	always @(posedge clk)
+		if (reset or counter == 23'd10_000_000) begin
+			counter <= 23'b0;
+		end else if (enable) begin
+			counter <= counter + 1;
+		end
+		
+		assign out = counter[28:25];
+endmodule 

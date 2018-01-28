@@ -1,0 +1,1 @@
+This project uses clock divider module tick_200 first to have clock with period 200ms. This is used in up_down_counter module wich countes up to 99 if you hold down button0 or counts down if you hold button1. Counting range is from 0 to 99 with over and under flow. Output of up_down_counter is connected to 2 7-segment display module wich actually display the numbers.

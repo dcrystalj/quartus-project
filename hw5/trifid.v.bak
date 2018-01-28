@@ -1,0 +1,23 @@
+module trifid( 
+	input ready, 
+	input clk, 
+	input [7:0] data, 
+	output reg done, 
+	output reg [31:0] cipher
+); 
+
+reg [2:0] cnt = 0; 
+reg [31:0] temp;
+
+always @(posedge clk) begin 
+	done <= 0;
+	cipher <= 0; 
+	if (ready || (cnt > 0 && cnt < 4)) begin 
+		temp <= {temp,data ^ 8’hF3}; 
+		cnt <= cnt + 1; 
+	end else if (cnt == 4) begin 
+		done <= 1; cipher <= temp; 
+	end 
+end
+
+endmodule

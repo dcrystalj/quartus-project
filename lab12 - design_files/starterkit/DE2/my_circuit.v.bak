@@ -1,0 +1,43 @@
+module my_circuit (
+	clk,
+	read_ready, write_ready,
+	readdata_left, readdata_right,
+	read, write,
+	writedata_left, writedata_right
+);
+
+
+
+
+parameter AUDIO_DATA_WIDTH	= 24;
+parameter BIT_COUNTER_INIT	= 5'd23;
+
+input 								clk;
+input 						 		read_ready, write_ready;
+input [AUDIO_DATA_WIDTH-1:0] 	readdata_left, readdata_right;
+output reg							read, write;
+output reg [AUDIO_DATA_WIDTH-1:0] writedata_left, writedata_right;
+
+reg [AUDIO_DATA_WIDTH-1:0] data_left;
+reg [AUDIO_DATA_WIDTH-1:0] data_right;
+
+
+always @ (posedge clk ) begin
+		if (read_ready) begin
+			data_left <= readdata_left;
+			data_right <= readdata_right;
+			read <= 1'b1;
+		end
+		
+		if (write_ready) begin
+			writedata_left <= data_left << 15;
+			writedata_right <= data_right << 15;
+			write <= 1'b1;
+		end
+end
+
+//always @ (posedge write_ready) begin
+	
+//end
+
+endmodule

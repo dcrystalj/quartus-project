@@ -1,0 +1,46 @@
+library verilog;
+use verilog.vl_types.all;
+entity trifid is
+    port(
+        ready           : in     vl_logic;
+        clk             : in     vl_logic;
+        crypt           : in     vl_logic;
+        data0           : in     vl_logic_vector(7 downto 0);
+        data1           : in     vl_logic_vector(7 downto 0);
+        data2           : in     vl_logic_vector(7 downto 0);
+        data3           : in     vl_logic_vector(7 downto 0);
+        data4           : in     vl_logic_vector(7 downto 0);
+        data5           : in     vl_logic_vector(7 downto 0);
+        data6           : in     vl_logic_vector(7 downto 0);
+        data7           : in     vl_logic_vector(7 downto 0);
+        data8           : in     vl_logic_vector(7 downto 0);
+        data9           : in     vl_logic_vector(7 downto 0);
+        data10          : in     vl_logic_vector(7 downto 0);
+        data11          : in     vl_logic_vector(7 downto 0);
+        data12          : in     vl_logic_vector(7 downto 0);
+        data13          : in     vl_logic_vector(7 downto 0);
+        data14          : in     vl_logic_vector(7 downto 0);
+        data15          : in     vl_logic_vector(7 downto 0);
+        data16          : in     vl_logic_vector(7 downto 0);
+        data17          : in     vl_logic_vector(7 downto 0);
+        done            : out    vl_logic;
+        cipher0         : out    vl_logic_vector(7 downto 0);
+        cipher1         : out    vl_logic_vector(7 downto 0);
+        cipher2         : out    vl_logic_vector(7 downto 0);
+        cipher3         : out    vl_logic_vector(7 downto 0);
+        cipher4         : out    vl_logic_vector(7 downto 0);
+        cipher5         : out    vl_logic_vector(7 downto 0);
+        cipher6         : out    vl_logic_vector(7 downto 0);
+        cipher7         : out    vl_logic_vector(7 downto 0);
+        cipher8         : out    vl_logic_vector(7 downto 0);
+        cipher9         : out    vl_logic_vector(7 downto 0);
+        cipher10        : out    vl_logic_vector(7 downto 0);
+        cipher11        : out    vl_logic_vector(7 downto 0);
+        cipher12        : out    vl_logic_vector(7 downto 0);
+        cipher13        : out    vl_logic_vector(7 downto 0);
+        cipher14        : out    vl_logic_vector(7 downto 0);
+        cipher15        : out    vl_logic_vector(7 downto 0);
+        cipher16        : out    vl_logic_vector(7 downto 0);
+        cipher17        : out    vl_logic_vector(7 downto 0)
+    );
+end trifid;

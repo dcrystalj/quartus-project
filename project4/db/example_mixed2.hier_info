@@ -1,0 +1,30 @@
+|example_mixed2
+w1 => w1.IN2
+w2 => ~NO_FANOUT~
+w3 => w3.IN1
+w4 => w4.IN1
+x2 => x2.IN1
+f <= lab1:inst2.port3
+
+
+|example_mixed2|verfunctions:inst1
+w1 => g.IN0
+w1 => h.IN0
+w2 => g.IN1
+w2 => h.IN0
+w3 => g.IN0
+w3 => h.IN1
+w4 => g.IN1
+w4 => h.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+h <= h.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|example_mixed2|lab1:inst2
+x1 => SYNTHESIZED_WIRE_2.IN0
+x2 => SYNTHESIZED_WIRE_2.IN1
+x2 => SYNTHESIZED_WIRE_1.IN0
+x3 => SYNTHESIZED_WIRE_1.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

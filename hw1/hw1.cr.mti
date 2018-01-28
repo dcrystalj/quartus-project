@@ -1,0 +1,15 @@
+C:/quartus_projects/hw1/full_adder.v {1 {vlog -work fax C:/quartus_projects/hw1/full_adder.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module full_adder
+
+Top level modules:
+	full_adder
+
+} {} {}} C:/quartus_projects/hw1/half_adder.v {1 {vlog -work fax C:/quartus_projects/hw1/half_adder.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module half_adder
+
+Top level modules:
+	half_adder
+
+} {} {}}
